@@ -2,8 +2,33 @@
   text-align: center;
 }
 
+.testcolor {
+  background-color: beige;
+  color: black;
+  height: 100vh;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.left-link {
+  margin-left: 2em;
+}
+
+.right-link {
+  margin-left: auto;
+  margin-right: 3em;
+}
+
+:link {
+  padding: 1em;
+  margin-left: 2em;
+}
+
 .App-logo {
-  height: 40vmin;
+  height: 5vmin;
   pointer-events: none;
 }
 
@@ -15,11 +40,9 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 5vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
