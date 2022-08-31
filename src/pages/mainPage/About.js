@@ -1,7 +1,5 @@
+import { StyledHeader } from "../../components/styles/Styles";
+
 export const About = () => {
-  return (
-    <div>
-      <h2>About me</h2>
-    </div>
-  );
+  return <StyledHeader>About me</StyledHeader>;
 };

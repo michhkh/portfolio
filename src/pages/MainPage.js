@@ -3,7 +3,6 @@ import { Header } from "../components/Header";
 import { Home } from "./mainPage/Home";
 import { Projects } from "./mainPage/Projects";
 import { About } from "./mainPage/About";
-import { StyledHeader } from "../components/styles/Styles";
 
 const MainPage = () => {
   return (

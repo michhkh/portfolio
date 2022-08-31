@@ -1,16 +1,23 @@
 import { Link } from "react-router-dom";
+import {
+  StyledLeftLink,
+  StyledLink,
+  StyledLinkWrapper,
+  StyledNav,
+  StyledRightLink,
+} from "./styles/Styles";
 
 export const Header = () => {
   return (
-    <nav className="App-header">
-      <div className="left-link">
-        <Link to="/">Home</Link>
+    <StyledNav>
+      <div>
+        <StyledLeftLink to="/">Michael.</StyledLeftLink>
       </div>
-      <div className="right-link">
-        <Link to="/">Home2</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/about">About</Link>
+      <div>
+        <StyledRightLink to="/">Home</StyledRightLink>
+        <StyledRightLink to="/projects">Projects</StyledRightLink>
+        <StyledRightLink to="/about">About</StyledRightLink>
       </div>
-    </nav>
+    </StyledNav>
   );
 };

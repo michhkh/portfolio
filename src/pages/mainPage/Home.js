@@ -1,19 +1,21 @@
 import {
+  StyledHeader,
   StyledHome,
   StyledHomeImage,
   StyledHomeWrapper,
 } from "../../components/styles/Styles";
-import unnamed from "../../images/unnamed.jpg";
+import marc from "../../images/marc-mintel-1iYTusNPlSk-unsplash.jpg";
 import "../../App.css";
 
 export const Home = () => {
   return (
     <StyledHome>
-      <h1>name</h1>
+      <StyledHeader>Michael</StyledHeader>
+
       <StyledHomeWrapper>
-        <StyledHomeImage>
-          <img src={unnamed} className="home-image" alt="image" />
-        </StyledHomeImage>
+        <div>
+          <StyledHomeImage img src={marc} className="home-image" alt="image" />
+        </div>
         <div>
           <p>Working as intended</p>
           <button className="btn">My projects</button>
