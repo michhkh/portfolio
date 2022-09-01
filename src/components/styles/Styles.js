@@ -16,7 +16,7 @@ export const StyledNav = styled.nav`
   justify-content: space-between;
   min-height: 5vh;
   font-size: 2rem;
-  padding: 0.75em 10em 0.75em 12em;
+  padding: 0.5em 6em 0.5em 8em;
   border: 1px solid #013a63;
 `;
 
@@ -50,12 +50,12 @@ export const StyledHeader = styled.h1`
   font-size: 4rem;
   font-size: bold;
   margin-top: 0;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   padding: 1em;
 `;
 
 export const StyledHomeWrapper = styled.div`
-  width: 90%;
+  width: 80%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
