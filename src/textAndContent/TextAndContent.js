@@ -24,7 +24,7 @@ export const TextAndContent = {
 
   aboutPage: {
     headline: "Om meg",
-    text: "I'm just a guy",
+    text: "Hvem er jeg?",
     listItem1:
       "Jeg har en passion for IT og programmering, DevOps, IT-drift og datanettverk",
     listItem2:
