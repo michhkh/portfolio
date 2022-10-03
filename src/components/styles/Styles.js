@@ -118,6 +118,7 @@ export const StyledHomeDiv = styled.div`
 export const StyledA = styled.a`
   margin-top: ${(props) => (props.homeA ? "1.5em" : "0")};
   font-size: 1.2rem;
+  color: ${(props) => props.projectsA && "#013A63"};
 `;
 
 export const StyledImage = styled.img`
