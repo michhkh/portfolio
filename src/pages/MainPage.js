@@ -1,22 +1,28 @@
 import { Route, Routes } from "react-router-dom";
+import { useState } from "react";
 import { Header } from "../components/Header";
-import { Home } from "./mainPage/Home";
-import { Projects } from "./mainPage/Projects";
-import { About } from "./mainPage/About";
+import { Home } from "./mainPage/HomePage";
+import { Projects } from "./mainPage/ProjectsPage";
+import { About } from "./mainPage/AboutPage";
+import {
+  StyledMainPageContainer,
+  StyledMainPageWrapper,
+} from "../components/styles/Styles";
+import { Sidebar } from "../components/Sidebar";
 
 const MainPage = () => {
-  return (
-    <div>
-      <div>
-        <Header />
-      </div>
+  const [isOpen, setIsOpen] = useState(false);
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="projects" element={<Projects />} />
-        <Route path="about" element={<About />} />
-      </Routes>
-    </div>
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <StyledMainPageContainer>
+      <Header toggle={toggle} />
+      <Home />
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+    </StyledMainPageContainer>
   );
 };
 

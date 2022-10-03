@@ -1,12 +1,16 @@
 import "./App.css";
-import { StyledContainer } from "./components/styles/Styles";
+import { InitialStyle } from "./components/styles/InitialStyling";
 import MainPage from "./pages/MainPage";
+import MyErrorBoundary from "./ErrorBoundary";
 
 function App() {
   return (
-    <StyledContainer>
-      <MainPage />
-    </StyledContainer>
+    <>
+      <MyErrorBoundary>
+        <InitialStyle />
+        <MainPage />
+      </MyErrorBoundary>
+    </>
   );
 }
 

@@ -1,23 +1,51 @@
-import { Link } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
+import { TextAndContent } from "../textAndContent/TextAndContent";
 import {
-  StyledLeftLink,
+  StyledNavContainer,
+  StyledNavLogo,
+  StyledNavWrapper,
+  StyledRouteLink,
   StyledLink,
-  StyledLinkWrapper,
   StyledNav,
-  StyledRightLink,
-} from "./styles/Styles";
+  StyledUl,
+  StyledLi,
+  StyledMobileIcon,
+} from "./styles/StyledHeader";
 
-export const Header = () => {
+export const Header = ({ toggle }) => {
   return (
-    <StyledNav>
-      <div>
-        <StyledLeftLink to="/">Michael.</StyledLeftLink>
-      </div>
-      <div>
-        <StyledRightLink to="/">Home</StyledRightLink>
-        <StyledRightLink to="/projects">Projects</StyledRightLink>
-        <StyledRightLink to="/about">About</StyledRightLink>
-      </div>
-    </StyledNav>
+    <StyledNavContainer>
+      <StyledNavWrapper>
+        <StyledNavLogo>
+          <StyledRouteLink to="/">
+            {TextAndContent.header.mainHome}
+          </StyledRouteLink>
+        </StyledNavLogo>
+
+        <StyledNav>
+          <StyledUl showNavs>
+            <StyledLi>
+              <StyledLink to="/">{TextAndContent.header.home}</StyledLink>
+            </StyledLi>
+
+            <StyledLi>
+              <StyledLink to="projects" smooth={true}>
+                {TextAndContent.header.projects}
+              </StyledLink>
+            </StyledLi>
+
+            <StyledLi>
+              <StyledLink to="about" smooth={true}>
+                {TextAndContent.header.about}
+              </StyledLink>
+            </StyledLi>
+          </StyledUl>
+        </StyledNav>
+
+        <StyledMobileIcon onClick={toggle}>
+          <FaBars />
+        </StyledMobileIcon>
+      </StyledNavWrapper>
+    </StyledNavContainer>
   );
 };

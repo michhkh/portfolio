@@ -1,68 +1,235 @@
-import { Link } from "react-router-dom";
+import { Link as LinkRouter } from "react-router-dom";
+import { Link as LinkScroll } from "react-scroll";
 import styled from "styled-components";
+import { InitialStyle } from "./InitialStyling";
 
-export const StyledContainer = styled.div`
+export const StyledMainPageContainer = styled.div`
   margin: 0;
   padding: 0;
   background: #012a4a;
   color: white;
-  height: 100vh;
   text-align: center;
+  font-family: var(--ff-secondary);
 `;
 
-export const StyledNav = styled.nav`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 5vh;
-  font-size: 2rem;
-  padding: 0.5em 6em 0.5em 8em;
-  border: 1px solid #013a63;
-`;
-
-export const StyledLeftLink = styled(Link)`
-  text-decoration: none;
-  color: white;
-  font-size: 3rem;
-  font-weight: bold;
-  letter-spacing: 0.25em;
-
-  :hover {
-    text-decoration: underline;
-  }
-`;
-
-export const StyledRightLink = styled(Link)`
-  margin-right: 2em;
-  text-decoration: none;
-  color: white;
-
-  :hover {
-    text-decoration: underline;
-  }
+export const StyledMainPageWrapper = styled.div`
+  padding: 0;
+  margin: 0;
 `;
 
 export const StyledHome = styled.div`
-  text-align: center;
+  width: 15%;
+  max-width: 150px;
+  height: 8vh;
+  transform: ${(props) =>
+    props.yes ? "rotate(0.443turn)" : "rotate(0.015turn)"};
+
+  background: rgba(255, 255, 255, 0.29);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.2px);
+  -webkit-backdrop-filter: blur(1.2px);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  left: ${(props) =>
+    props.left ? "10%" : props.right ? "76%" : props.middle && "45%"};
+  top: ${(props) => (props.top ? "6em" : props.bottom && "45em")};
+  position: absolute;
+  opacity: ${(props) => props.yes && "0.27"};
+
+  @media screen and (min-width: 600px) {
+    height: 12vh;
+    left: ${(props) =>
+      props.left ? "10%" : props.right ? "80%" : props.middle && "45%"};
+    top: ${(props) => (props.top ? "6em" : props.bottom && "44em")};
+  }
 `;
 
-export const StyledHeader = styled.h1`
-  font-size: 4rem;
-  font-size: bold;
-  margin-top: 0;
-  margin-bottom: 1em;
-  padding: 1em;
+export const StyledSection = styled.section`
+  width: 85%;
+  padding: 1em 0 2em;
+  position: ${(props) => props.intro && "relative"};
+  line-height: 1.6;
+
+  background: ${(props) => props.glass && "rgba(22, 224, 189, 0.04)"};
+  border-radius: ${(props) => props.glass && "16px"};
+  box-shadow: ${(props) => props.glass && "0 4px 30px rgba(0, 0, 0, 0.1)"};
+  backdrop-filter: ${(props) => props.glass && "blur(4.7px)"};
+  -webkit-backdrop-filter: ${(props) => props.glass && "blur(4.7px)"};
+  border: ${(props) => props.glass && "1px solid rgba(22, 224, 189, 0.12)"};
+  width: ${(props) => props.aboutTest && "70%"};
+  margin: auto auto;
+  height: 100vh;
+
+  @media (min-width: 600px) {
+    display: ${(props) => props.intro && "grid"};
+    width: ${(props) => props.intro && "min-content"};
+    margin: ${(props) => props.intro && "0 auto"};
+    grid-column-gap: ${(props) => props.intro && "1em"};
+    grid-template-areas: ${(props) =>
+      props.intro && `"img title" "img subtitle"`};
+    grid-template-columns: ${(props) =>
+      props.intro && "min-content max-content"};
+  }
+`;
+
+export const StyledBg = styled.div`
+  background: ${(props) =>
+    props.projectBg ? "#013A63" : props.aboutBg && "#01497C"};
+`;
+
+export const StyledHomeContainer = styled.div`
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 60vh;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; */
+
+  @media (min-width: 600px) {
+    width: 100%;
+    /* flex-direction: row;
+    justify-content: flex-start; */
+  }
 `;
 
 export const StyledHomeWrapper = styled.div`
-  width: 80%;
+  width: 100%;
+  height: 55vh;
+  margin: 1em auto;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  font-size: 1.6rem;
+
+  @media screen and (min-width: 600px) {
+    width: 100%;
+    height: 40vh;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+`;
+
+export const StyledHomeDiv = styled.div`
+  margin-top: 2em;
+`;
+
+export const StyledImage = styled.img`
+  max-width: ${(props) => (props.aboutImg ? "15%" : "75%")};
+  margin-top: ${(props) => props.homeImg && "2em"};
+
+  @media screen and (min-width: 600px) {
+    max-width: ${(props) => (props.aboutImg ? "15%" : "25%")};
+  }
 `;
 
 export const StyledHomeImage = styled.img`
-  max-width: 60%;
+  max-width: 75%;
   border-radius: 2em;
+
+  @media (min-width: 600px) {
+    max-width: 35%;
+  }
+`;
+
+export const StyledBgStyling = styled.div`
+  background: ${(props) =>
+    props.aboutStyling
+      ? "rgba(255, 255, 255, 0.29)"
+      : props.homeStyling
+      ? "rgba(255, 255, 255, 0.29)"
+      : "rgba(22, 224, 189, 0.54)"};
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: ${(props) =>
+    props.aboutStyling
+      ? "blur(1.2px)"
+      : props.homeStyling
+      ? "blur(1.2px)"
+      : "blur(2.5px)"};
+  -webkit-backdrop-filter: ${(props) =>
+    props.aboutStyling
+      ? "blur(1.2px)"
+      : props.homeStyling
+      ? "blur(1.2px)"
+      : "blur(2.5px)"};
+  border: ${(props) =>
+    props.aboutStyling
+      ? "1px solid rgba(255, 255, 255, 0.26)"
+      : props.homeStyling
+      ? "1px solid rgba(255, 255, 255, 0.26)"
+      : "1px solid rgba(22, 224, 189, 0.24)"};
+  opacity: ${(props) =>
+    props.aboutStyling ? "0.88" : props.homeStyling ? "0.92" : "1"};
+  padding: ${(props) =>
+    props.aboutStyling
+      ? ".25em 1em"
+      : props.homeStyling
+      ? "1em 2.5em"
+      : "2em 1em"};
+  width: ${(props) =>
+    props.aboutStyling ? "90%" : props.homeStyling ? "40%" : "60%"};
+  display: flex;
+  flex-direction: ${(props) =>
+    props.aboutStyling ? "column" : props.homeStyling ? "column" : "row"};
+  align-items: ${(props) =>
+    props.homeStyling ? "center" : props.projectsStyling && "space-evenly"};
+  justify-content: ${(props) =>
+    props.homeStyling ? "center" : props.projectsStyling && "center"};
+  margin: ${(props) =>
+    props.leftStyling
+      ? "0 0 2em"
+      : props.rightStyling
+      ? "0 0 8em"
+      : props.projectsStyling
+      ? "0 1em 2em"
+      : props.aboutStyling
+      ? "1em auto"
+      : props.homeStyling && "0"};
+
+  @media (min-width: 600px) {
+    padding: ${(props) =>
+      props.aboutStyling ? "1em" : props.homeStyling ? ".25em" : "4em 2em"};
+    width: ${(props) => props.homeStyling && "40%"};
+  }
+`;
+
+export const StyledProjectsContainer = styled.div`
+  width: 100%;
+`;
+
+export const StyledDiv = styled.div`
+  width: ${(props) => (props.projectsDiv ? "90%" : props.aboutDiv && "60%")};
+  margin: 2em auto;
+  display: ${(props) =>
+    props.projectsDiv ? "flex" : props.aboutDiv && "flex"};
+  flex-direction: ${(props) =>
+    props.projectsDiv ? "column" : props.aboutDiv && "row"};
+  align-items: ${(props) =>
+    props.projectsDiv ? "center" : props.aboutDiv && "center"};
+  justify-content: ${(props) =>
+    props.projectsDiv ? "center" : props.aboutDiv && "space-evenly"};
+
+  @media screen and (min-width: 600px) {
+    flex-direction: ${(props) => props.projectsDiv && "row"};
+  }
+`;
+
+export const StyledProjectsDiv = styled.div`
+  width: 90%;
+  margin: auto auto;
+  display: flex;
+  justify-content: center;
+`;
+
+export const StyledAboutDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+`;
+
+export const StyledAboutWrapper = styled.div`
+  width: 90%;
+  margin: 0 auto;
 `;
