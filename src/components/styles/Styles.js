@@ -117,6 +117,7 @@ export const StyledHomeDiv = styled.div`
 
 export const StyledA = styled.a`
   margin-top: ${(props) => (props.homeA ? "1.5em" : "0")};
+  font-size: 1.2rem;
 `;
 
 export const StyledImage = styled.img`
