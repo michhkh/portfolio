@@ -40,7 +40,7 @@ export const StyledHome = styled.div`
     height: 12vh;
     left: ${(props) =>
       props.left ? "10%" : props.right ? "80%" : props.middle && "45%"};
-    top: ${(props) => (props.top ? "6em" : props.bottom && "44em")};
+    top: ${(props) => (props.top ? "6em" : props.bottom && "40em")};
   }
 `;
 
@@ -96,7 +96,7 @@ export const StyledHomeContainer = styled.div`
 
 export const StyledHomeWrapper = styled.div`
   width: 100%;
-  height: 55vh;
+  height: 62vh;
   margin: 1em auto;
   display: flex;
   flex-direction: column;
@@ -105,7 +105,7 @@ export const StyledHomeWrapper = styled.div`
 
   @media screen and (min-width: 600px) {
     width: 100%;
-    height: 40vh;
+    height: auto;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -115,9 +115,15 @@ export const StyledHomeDiv = styled.div`
   margin-top: 2em;
 `;
 
+export const StyledA = styled.a`
+  margin-top: ${(props) => (props.homeA ? "1.5em" : "0")};
+`;
+
 export const StyledImage = styled.img`
-  max-width: ${(props) => (props.aboutImg ? "15%" : "75%")};
+  max-width: ${(props) =>
+    props.aboutImg ? "15%" : props.projectsImg ? "100%" : "75%"};
   margin-top: ${(props) => props.homeImg && "2em"};
+  width: ${(props) => props.projectsImg && "100%"};
 
   @media screen and (min-width: 600px) {
     max-width: ${(props) => (props.aboutImg ? "15%" : "25%")};
@@ -125,11 +131,12 @@ export const StyledImage = styled.img`
 `;
 
 export const StyledHomeImage = styled.img`
-  max-width: 75%;
+  max-width: 45%;
   border-radius: 2em;
+  z-index: 10;
 
   @media (min-width: 600px) {
-    max-width: 35%;
+    max-width: 25%;
   }
 `;
 
@@ -200,8 +207,13 @@ export const StyledProjectsContainer = styled.div`
 `;
 
 export const StyledDiv = styled.div`
-  width: ${(props) => (props.projectsDiv ? "90%" : props.aboutDiv && "60%")};
-  margin: 2em auto;
+  width: ${(props) =>
+    props.projectsDiv
+      ? "90%"
+      : props.aboutTextDiv
+      ? "90%"
+      : props.aboutDiv && "60%"};
+  margin: ${(props) => (props.aboutTextDiv ? "0 auto" : "2em auto")};
   display: ${(props) =>
     props.projectsDiv ? "flex" : props.aboutDiv && "flex"};
   flex-direction: ${(props) =>
@@ -213,6 +225,7 @@ export const StyledDiv = styled.div`
 
   @media screen and (min-width: 600px) {
     flex-direction: ${(props) => props.projectsDiv && "row"};
+    width: ${(props) => props.aboutTextDiv && "58%"};
   }
 `;
 
