@@ -55,7 +55,7 @@ export const StyledHeader = styled.h1`
   font-size: 2rem;
   font-weight: bold;
   margin-top: 0;
-  margin-bottom: ${(props) => (props.homeSection ? "1.5em" : "0.5em")};
+  margin-bottom: ${(props) => (props.homeSection ? ".5em" : "0.5em")};
   padding: 0.5em;
 
   @media (min-width: 600px) {
@@ -71,6 +71,7 @@ export const StyledP = styled.p`
   padding: ${(props) => props.subIntro || (props.aboutP && ".25em 1em")};
   margin-bottom: ${(props) =>
     props.projectsP ? "1em" : props.homeP && ".5em"};
+  margin-top: ${(props) => props.aboutText && ".8em"};
 
   @media (min-width: 600px) {
     align-self: ${(props) => props.subIntro && "start"};
@@ -83,7 +84,7 @@ export const StyledP = styled.p`
   }
 
   @media (min-width: 800px) {
-    font-size: 1.6rem;
+    font-size: ${(props) => (props.aboutText ? "1.4rem" : "1.6rem")};
   }
 `;
 
