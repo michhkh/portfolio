@@ -20,20 +20,25 @@ export const About = () => {
           <StyledHeader>{TextAndContent.aboutPage.headline}</StyledHeader>
           <StyledP>{TextAndContent.aboutPage.text}</StyledP>
           <StyledBgStyling aboutStyling>
-            <StyledUl aboutList>
+            {/* <StyledUl aboutList>
               <StyledLi aboutList>
                 {TextAndContent.aboutPage.listItem1}
               </StyledLi>
-              {/* Hobbies */}
+              {/* Hobbies /}
               <StyledLi aboutList>
                 {TextAndContent.aboutPage.listItem2}
               </StyledLi>
-              {/* Interest */}
+              {/* Interest /}
               <StyledLi aboutList>
                 {TextAndContent.aboutPage.listItem3}
               </StyledLi>
-              {/* Basic info */}
-            </StyledUl>
+              {/* Basic info /}
+            </StyledUl> */}
+            <StyledDiv aboutTextDiv>
+              <StyledP aboutText>{TextAndContent.aboutPage.listItem1}</StyledP>
+              <StyledP aboutText>{TextAndContent.aboutPage.listItem2}</StyledP>
+              <StyledP aboutText>{TextAndContent.aboutPage.listItem3}</StyledP>
+            </StyledDiv>
             <StyledDiv aboutDiv>
               <StyledImage aboutImg src={TextAndContent.aboutPage.imageHTML} />
               <StyledImage aboutImg src={TextAndContent.aboutPage.imageCSS} />
