@@ -38,7 +38,9 @@ export const Home = () => {
           <StyledBgStyling homeStyling>
             {/* <StyledHomeDiv> */}
             <StyledP homeP>{TextAndContent.homePage.text}</StyledP>
-            <StyledButton>{TextAndContent.homePage.buttonText}</StyledButton>
+            <StyledButton to="projects" smooth={true}>
+              {TextAndContent.homePage.buttonText}
+            </StyledButton>
             <StyledA homeA href="https://github.com/michhkh" target="_blank">
               <img
                 src={TextAndContent.homePage.imageGithub}
