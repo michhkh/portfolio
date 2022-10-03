@@ -7,6 +7,7 @@ import {
   StyledImage,
   StyledHomeContainer,
   StyledBgStyling,
+  StyledA,
 } from "../../components/styles/Styles";
 import { StyledHeader } from "../../components/styles/StyledElements";
 import "../../App.css";
@@ -38,7 +39,13 @@ export const Home = () => {
             {/* <StyledHomeDiv> */}
             <StyledP homeP>{TextAndContent.homePage.text}</StyledP>
             <StyledButton>{TextAndContent.homePage.buttonText}</StyledButton>
-            <StyledImage homeImg src={TextAndContent.homePage.imageGithub} />
+            <StyledA homeA href="https://github.com/michhkh" target="_blank">
+              <img
+                src={TextAndContent.homePage.imageGithub}
+                width="80"
+                height="80"
+              />
+            </StyledA>
             {/* </StyledHomeDiv> */}
           </StyledBgStyling>
         </StyledHomeWrapper>
