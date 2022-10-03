@@ -1,4 +1,6 @@
 import marc from "../images/marc-mintel-1iYTusNPlSk-unsplash.jpg";
+import pxl from "../images/PXL_20220930_103519664_3.jpg";
+import invoice from "../images/Invoice-Screen.jpg";
 
 export const TextAndContent = {
   header: {
@@ -10,8 +12,8 @@ export const TextAndContent = {
 
   homePage: {
     headline: "Michael",
-    text: "Dev og IT fellow",
-    image: marc,
+    text: "Dev & IT fellow",
+    image: pxl,
     imageGithub:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg",
     buttonText: "Til prosjekter",
@@ -20,17 +22,18 @@ export const TextAndContent = {
   projectsPage: {
     headline: "Mine Prosjekter",
     text: "Sjekk det ut",
+    image: invoice,
   },
 
   aboutPage: {
     headline: "Om meg",
     text: "Hvem er jeg?",
     listItem1:
-      "Jeg har en passion for IT og programmering, DevOps, IT-drift og datanettverk",
+      "Jeg har en passion for IT og programmering, DevOps, IT-drift og datanettverk.",
     listItem2:
-      "Har kunnskap innenfor frontend og backend, samt IT-drift og elektronikk",
+      "Har kunnskap innenfor frontend og backend, samt IT-drift og sikkerhet.",
     listItem3:
-      "Av fritidsinteresser er jeg interessert i gaming, fotball og kampsport",
+      "Av fritidsinteresser er jeg interessert i gaming, fotball og kampsport.",
     imageJS:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     imageCSS:
