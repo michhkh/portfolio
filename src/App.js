@@ -1,4 +1,3 @@
-import "./App.css";
 import { InitialStyle } from "./components/styles/InitialStyling";
 import MainPage from "./pages/MainPage";
 import MyErrorBoundary from "./ErrorBoundary";
