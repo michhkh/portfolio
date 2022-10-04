@@ -1,13 +1,7 @@
-import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import { Header } from "../components/Header";
 import { Home } from "./mainPage/HomePage";
-import { Projects } from "./mainPage/ProjectsPage";
-import { About } from "./mainPage/AboutPage";
-import {
-  StyledMainPageContainer,
-  StyledMainPageWrapper,
-} from "../components/styles/Styles";
+import { StyledMainPageContainer } from "../components/styles/Styles";
 import { Sidebar } from "../components/Sidebar";
 
 const MainPage = () => {
