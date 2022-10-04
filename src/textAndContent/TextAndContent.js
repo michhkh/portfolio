@@ -21,7 +21,7 @@ export const TextAndContent = {
 
   projectsPage: {
     headline: "Mine Prosjekter",
-    text: "Sjekk det ut",
+    text: "Sjekk ut hva jeg har laget",
     image: invoice,
     projectName1: "Invoice Creator",
     projectName2: "Collatz",
