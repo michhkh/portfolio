@@ -40,8 +40,8 @@ export const Home = () => {
             <StyledA homeA href="https://github.com/michhkh" target="_blank">
               <img
                 src={TextAndContent.homePage.imageGithub}
-                width="80"
-                height="80"
+                width="75"
+                height="75"
               />
             </StyledA>
             {/* </StyledHomeDiv> */}
