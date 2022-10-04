@@ -25,32 +25,6 @@ export const StyledButton = styled(LinkScroll)`
   }
 `;
 
-// export const StyledH1 = styled.h1`
-//   font-weight: ${(props) =>
-//     props.notBold ? "var(--fw-reg)" : "var(--fw-bold)"};
-//   font-size: ${(props) =>
-//     props.large ? "3.5rem" : props.medium ? "2.5rem" : "2rem"};
-//   color: ${(props) => props.colorYes && "var(--clr-accent)"};
-//   position: ${(props) => props.colorYes && "relative"};
-//   margin-bottom: 0.25em;
-//   line-height: 1;
-
-//   &::after {
-//     content: ${(props) => props.colorYes && `''`};
-//     display: ${(props) => props.colorYes && `block`};
-//     width: ${(props) => props.colorYes && "2em"};
-//     height: ${(props) => props.colorYes && "1px"};
-//     margin: ${(props) => props.colorYes && "0.5em auto 1em"};
-//     background: ${(props) => props.colorYes && "#fff"};
-//     opacity: ${(props) => props.colorYes && "0.25"};
-//   }
-
-//   @media (min-width: 800px) {
-//     font-size: ${(props) =>
-//       props.large ? "4rem" : props.medium ? "3.75rem" : "2rem"};
-//   }
-// `;
-
 export const StyledHeader = styled.h1`
   font-size: 2rem;
   font-weight: bold;
@@ -65,23 +39,10 @@ export const StyledHeader = styled.h1`
 
 export const StyledP = styled.p`
   font-size: 1.2rem;
-  font-family: ${(props) => props.subIntro && `Source Code Pro, monospace`};
-  display: ${(props) => props.subIntro && "inline-block"};
-  background: ${(props) => props.subIntro && "var(--clr-accent)"};
-  padding: ${(props) => props.subIntro || (props.aboutP && ".25em 1em")};
+  padding: ${(props) => props.aboutP && ".25em 1em"};
   margin-bottom: ${(props) =>
     props.projectsP ? "1em" : props.homeP && ".5em"};
   margin-top: ${(props) => props.aboutText && ".8em"};
-
-  @media (min-width: 600px) {
-    align-self: ${(props) => props.subIntro && "start"};
-    grid-column: ${(props) => props.subIntro && "-1 / 1"};
-    grid-row: ${(props) => props.subIntro && "2"};
-    text-align: ${(props) => props.subIntro && "right"};
-    position: ${(props) => props.subIntro && "relative"};
-    left: ${(props) => props.subIntro && "-1.5em"};
-    width: ${(props) => props.subIntro && "calc(100% + 1.5em)"};
-  }
 
   @media (min-width: 800px) {
     font-size: ${(props) => (props.aboutText ? "1.4rem" : "1.6rem")};
