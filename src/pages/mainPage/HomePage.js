@@ -2,15 +2,11 @@ import {
   StyledHome,
   StyledHomeImage,
   StyledHomeWrapper,
-  StyledHomeDiv,
   StyledSection,
-  StyledImage,
-  StyledHomeContainer,
   StyledBgStyling,
   StyledA,
 } from "../../components/styles/Styles";
 import { StyledHeader } from "../../components/styles/StyledElements";
-import "../../App.css";
 import { StyledButton, StyledP } from "../../components/styles/StyledElements";
 import { Projects } from "./ProjectsPage";
 import { About } from "./AboutPage";
@@ -27,7 +23,7 @@ export const Home = () => {
         </StyledHeader>
 
         <StyledHome left top />
-        <StyledHome right top yes />
+        <StyledHome right top transform />
 
         <StyledHomeWrapper>
           <StyledHomeImage
@@ -51,8 +47,10 @@ export const Home = () => {
             {/* </StyledHomeDiv> */}
           </StyledBgStyling>
         </StyledHomeWrapper>
-        <StyledHome left bottom yes />
-        <StyledHome middle bottom yes />
+        <StyledHome center transformIt hideIt />
+        <StyledHome centerDuo transformIt hideIt />
+        <StyledHome left bottom transformIt />
+        <StyledHome middle bottom transformIt />
         <StyledHome right bottom />
       </StyledSection>
 
