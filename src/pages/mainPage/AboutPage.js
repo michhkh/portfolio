@@ -1,6 +1,5 @@
 import { StyledP } from "../../components/styles/StyledElements";
 import {
-  StyledAboutDiv,
   StyledAboutWrapper,
   StyledBg,
   StyledBgStyling,
@@ -10,7 +9,6 @@ import {
 } from "../../components/styles/Styles";
 import { StyledHeader } from "../../components/styles/StyledElements";
 import { TextAndContent } from "../../textAndContent/TextAndContent";
-import { StyledUl, StyledLi } from "../../components/styles/StyledHeader";
 
 export const About = () => {
   return (
@@ -45,6 +43,7 @@ export const About = () => {
               <StyledImage aboutImg src={TextAndContent.aboutPage.imageJS} />
               <StyledImage
                 aboutImg
+                python
                 src={TextAndContent.aboutPage.imagePython}
               />
               <StyledImage aboutImg src={TextAndContent.aboutPage.imageFigma} />
