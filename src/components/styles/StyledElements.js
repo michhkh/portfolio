@@ -38,11 +38,16 @@ export const StyledHeader = styled.h1`
 `;
 
 export const StyledP = styled.p`
-  font-size: 1.2rem;
+  font-size: ${(props) =>
+    props.aboutText ? "1rem" : props.homeP ? "1rem" : "1.2rem"};
   padding: ${(props) => props.aboutP && ".25em 1em"};
   margin-bottom: ${(props) =>
     props.projectsP ? "1em" : props.homeP && ".5em"};
   margin-top: ${(props) => props.aboutText && ".8em"};
+
+  @media screen and (min-width: 300px) {
+    font-size: 1.2rem;
+  }
 
   @media (min-width: 800px) {
     font-size: ${(props) => (props.aboutText ? "1.4rem" : "1.6rem")};
@@ -65,6 +70,7 @@ export const StyledScrollButton = styled(LinkScroll)`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 
   @media (min-width: 500px) {
     left: 93%;
