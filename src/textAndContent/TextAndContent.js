@@ -23,6 +23,10 @@ export const TextAndContent = {
     headline: "Mine Prosjekter",
     text: "Sjekk det ut",
     image: invoice,
+    projectName1: "Invoice Creator",
+    projectName2: "Collatz",
+    projectName3: "Adventure",
+    projectName4: "React App",
   },
 
   aboutPage: {
@@ -44,5 +48,11 @@ export const TextAndContent = {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg",
     imageFigma:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+  },
+
+  sidebar: {
+    home: "Hjem",
+    projects: "Prosjekter",
+    about: "Om",
   },
 };
