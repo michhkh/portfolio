@@ -35,16 +35,16 @@ export const StyledHome = styled.div`
       : props.middle
       ? "45%"
       : props.center
-      ? "35%"
-      : props.centerDuo && "37%"};
+      ? "33%"
+      : props.centerDuo && "35%"};
   top: ${(props) =>
     props.top
-      ? "6em"
+      ? "12%"
       : props.bottom
-      ? "45em"
+      ? "92%"
       : props.center
-      ? "24em"
-      : props.centerDuo && "25em"};
+      ? "28em"
+      : props.centerDuo && "30em"};
   position: absolute;
   opacity: ${(props) => props.transformIt && "0.27"};
   visibility: ${(props) => (props.hideIt ? "hidden" : "visible")};
@@ -61,10 +61,14 @@ export const StyledHome = styled.div`
 export const StyledSection = styled.section`
   width: 85%;
   padding: 1em 0 2em;
-  line-height: 1.6;
+  line-height: 1.2;
 
   margin: auto auto;
   height: 100vh;
+
+  @media screen and (min-width: 600px) {
+    line-height: 1.6;
+  }
 `;
 
 export const StyledBg = styled.div`
@@ -105,14 +109,14 @@ export const StyledHomeDiv = styled.div`
 `;
 
 export const StyledA = styled.a`
-  margin-top: ${(props) => (props.homeA ? "1.5em" : "0")};
+  margin-top: ${(props) => (props.homeA ? "1.25em" : "0")};
   font-size: 1.2rem;
   color: ${(props) => props.projectsA && "#013A63"};
 `;
 
 export const StyledImage = styled.img`
   max-width: ${(props) =>
-    props.aboutImg ? "15%" : props.projectsImg ? "100%" : "75%"};
+    props.aboutImg ? "36%" : props.projectsImg ? "100%" : "75%"};
   margin-top: ${(props) => props.homeImg && "2em"};
   width: ${(props) => props.projectsImg && "100%"};
   filter: ${(props) =>
@@ -167,9 +171,9 @@ export const StyledBgStyling = styled.div`
       ? ".25em 1em"
       : props.homeStyling
       ? "1em 2.5em"
-      : "2em 1em"};
+      : "1em 1.25em"};
   width: ${(props) =>
-    props.aboutStyling ? "90%" : props.homeStyling ? "40%" : "60%"};
+    props.aboutStyling ? "90%" : props.homeStyling ? "40%" : "65%"};
   display: flex;
   flex-direction: ${(props) =>
     props.aboutStyling ? "column" : props.homeStyling ? "column" : "row"};
@@ -204,7 +208,7 @@ export const StyledDiv = styled.div`
     props.projectsDiv
       ? "90%"
       : props.aboutTextDiv
-      ? "90%"
+      ? "100%"
       : props.aboutDiv && "60%"};
   margin: ${(props) => (props.aboutTextDiv ? "0 auto" : "2em auto")};
   display: ${(props) =>
@@ -215,6 +219,11 @@ export const StyledDiv = styled.div`
     props.projectsDiv ? "center" : props.aboutDiv && "center"};
   justify-content: ${(props) =>
     props.projectsDiv ? "center" : props.aboutDiv && "space-evenly"};
+  line-height: ${(props) => props.aboutTextDiv && "1.4"};
+
+  @media screen and (min-width: 400px) {
+    line-height: ${(props) => props.aboutTextDiv && "1.6"};
+  }
 
   @media screen and (min-width: 600px) {
     flex-direction: ${(props) => props.projectsDiv && "row"};
