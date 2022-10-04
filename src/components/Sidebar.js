@@ -1,3 +1,4 @@
+import { TextAndContent } from "../textAndContent/TextAndContent";
 import {
   CloseIcon,
   Icon,
@@ -16,13 +17,13 @@ export const Sidebar = ({ isOpen, toggle }) => {
       <SidebarWrapper>
         <SidebarMenu>
           <SidebarLink to="/" onClick={toggle}>
-            Home
+            {TextAndContent.sidebar.home}
           </SidebarLink>
           <SidebarLink to="projects" onClick={toggle}>
-            Projects
+            {TextAndContent.sidebar.projects}
           </SidebarLink>
           <SidebarLink to="about" onClick={toggle}>
-            About
+            {TextAndContent.sidebar.about}
           </SidebarLink>
         </SidebarMenu>
       </SidebarWrapper>
