@@ -128,7 +128,7 @@ export const StyledImage = styled.img`
 `;
 
 export const StyledHomeImage = styled.img`
-  max-width: 45%;
+  max-width: 40%;
   border-radius: 2em;
   z-index: 10;
 
@@ -190,7 +190,7 @@ export const StyledBgStyling = styled.div`
       ? "0 1em 2em"
       : props.aboutStyling
       ? "1em auto"
-      : props.homeStyling && "0"};
+      : props.homeStyling && "1em 0 0 0"};
 
   @media (min-width: 600px) {
     padding: ${(props) =>
