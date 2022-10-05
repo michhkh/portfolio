@@ -61,14 +61,23 @@ export const StyledRouteLink = styled(LinkRouter)`
 `;
 
 export const StyledLink = styled(LinkScroll)`
-  margin-left: 1.5em;
+  margin-left: ${(props) => props.linkItem && "1.5em"};
   text-decoration: none;
   color: white;
-  font-size: 1.6rem;
+  font-size: ${(props) =>
+    props.linkItem ? "1.6rem" : props.linkLogo && "1.2rem"};
+
+  font-weight: ${(props) => props.linkLogo && "bold"};
+  letter-spacing: ${(props) => props.linkLogo && "0.25em"};
+  font-family: ${(props) => props.linkLogo && "Slackey, cursive"};
 
   :hover {
     text-decoration: underline;
     cursor: pointer;
+  }
+
+  @media (min-width: 600px) {
+    font-size: ${(props) => props.linkLogo && "2.8rem"};
   }
 `;
 
