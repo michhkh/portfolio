@@ -18,20 +18,6 @@ export const About = () => {
           <StyledHeader>{TextAndContent.aboutPage.headline}</StyledHeader>
           <StyledP>{TextAndContent.aboutPage.text}</StyledP>
           <StyledBgStyling aboutStyling>
-            {/* <StyledUl aboutList>
-              <StyledLi aboutList>
-                {TextAndContent.aboutPage.listItem1}
-              </StyledLi>
-              {/* Hobbies /}
-              <StyledLi aboutList>
-                {TextAndContent.aboutPage.listItem2}
-              </StyledLi>
-              {/* Interest /}
-              <StyledLi aboutList>
-                {TextAndContent.aboutPage.listItem3}
-              </StyledLi>
-              {/* Basic info /}
-            </StyledUl> */}
             <StyledDiv aboutTextDiv>
               <StyledP aboutText>{TextAndContent.aboutPage.listItem1}</StyledP>
               <StyledP aboutText>{TextAndContent.aboutPage.listItem2}</StyledP>
