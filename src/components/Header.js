@@ -17,25 +17,27 @@ export const Header = ({ toggle }) => {
     <StyledNavContainer>
       <StyledNavWrapper>
         <StyledNavLogo>
-          <StyledRouteLink to="/">
+          <StyledLink linkLogo to="/">
             {TextAndContent.header.mainHome}
-          </StyledRouteLink>
+          </StyledLink>
         </StyledNavLogo>
 
         <StyledNav>
           <StyledUl showNavs>
             <StyledLi>
-              <StyledLink to="/">{TextAndContent.header.home}</StyledLink>
+              <StyledLink linkItem to="/">
+                {TextAndContent.header.home}
+              </StyledLink>
             </StyledLi>
 
             <StyledLi>
-              <StyledLink to="projects" smooth={true}>
+              <StyledLink linkItem to="projects" smooth={true}>
                 {TextAndContent.header.projects}
               </StyledLink>
             </StyledLi>
 
             <StyledLi>
-              <StyledLink to="about" smooth={true}>
+              <StyledLink linkItem to="about" smooth={true}>
                 {TextAndContent.header.about}
               </StyledLink>
             </StyledLi>
