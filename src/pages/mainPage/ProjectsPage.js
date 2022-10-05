@@ -23,7 +23,7 @@ export const Projects = () => {
               <StyledBgStyling projectsStyling>
                 <StyledA
                   projectsA
-                  href="https://michhkh.github.io/invoice-creator/"
+                  href={TextAndContent.projectsPage.projectLink1}
                   target="_blank"
                 >
                   {TextAndContent.projectsPage.projectName1}
@@ -35,7 +35,7 @@ export const Projects = () => {
               <StyledBgStyling projectsStyling>
                 <StyledA
                   projectsA
-                  href="https://michhkh.github.io/collatz/"
+                  href={TextAndContent.projectsPage.projectLink2}
                   target="_blank"
                 >
                   {TextAndContent.projectsPage.projectName2}
@@ -49,7 +49,7 @@ export const Projects = () => {
               <StyledBgStyling projectsStyling>
                 <StyledA
                   projectsA
-                  href="https://michhkh.github.io/adventure/"
+                  href={TextAndContent.projectsPage.projectLink3}
                   target="_blank"
                 >
                   {TextAndContent.projectsPage.projectName3}
@@ -61,7 +61,7 @@ export const Projects = () => {
               <StyledBgStyling projectsStyling>
                 <StyledA
                   projectsA
-                  href="https://michhkh.github.io/react-app/"
+                  href={TextAndContent.projectsPage.projectLink4}
                   target="_blank"
                 >
                   {TextAndContent.projectsPage.projectName4}
