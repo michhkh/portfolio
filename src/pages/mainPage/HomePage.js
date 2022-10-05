@@ -37,11 +37,16 @@ export const Home = () => {
             <StyledButton to="projects" smooth={true}>
               {TextAndContent.homePage.buttonText}
             </StyledButton>
-            <StyledA homeA href="https://github.com/michhkh" target="_blank">
+            <StyledA
+              homeA
+              href={TextAndContent.homePage.imageLink}
+              target="_blank"
+            >
               <img
-                src={TextAndContent.homePage.imageGithub}
+                src={TextAndContent.homePage.imageSource}
                 width="75"
                 height="75"
+                alt="github logo"
               />
             </StyledA>
             {/* </StyledHomeDiv> */}
