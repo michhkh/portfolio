@@ -25,8 +25,12 @@ export const TextAndContent = {
     image: invoice,
     projectName1: "Invoice Creator",
     projectName2: "Collatz",
-    projectName3: "Adventure",
+    projectName3: "Password Generator",
     projectName4: "React App",
+    projectLink1: "https://michhkh.github.io/invoice-creator/",
+    projectLink2: "https://michhkh.github.io/collatz/",
+    projectLink3: "https://michhkh.github.io/password-generator/",
+    projectLink4: "https://michhkh.github.io/react-app/",
   },
 
   aboutPage: {
