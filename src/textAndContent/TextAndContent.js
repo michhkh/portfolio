@@ -14,8 +14,9 @@ export const TextAndContent = {
     headline: "Michael",
     text: "Dev & IT fellow",
     image: pxl,
-    imageGithub:
+    imageSource:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg",
+    imageLink: "https://github.com/michhkh",
     buttonText: "Til prosjekter",
   },
 
