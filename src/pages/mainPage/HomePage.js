@@ -1,5 +1,4 @@
 import {
-  StyledHome,
   StyledHomeImage,
   StyledHomeWrapper,
   StyledSection,
@@ -22,9 +21,6 @@ export const Home = () => {
           {TextAndContent.homePage.headline}
         </StyledHeader>
 
-        <StyledHome left top />
-        <StyledHome right top transform />
-
         <StyledHomeWrapper>
           <StyledHomeImage
             img
@@ -32,7 +28,6 @@ export const Home = () => {
             alt="image"
           />
           <StyledBgStyling homeStyling>
-            {/* <StyledHomeDiv> */}
             <StyledP homeP>{TextAndContent.homePage.text}</StyledP>
             <StyledButton to="projects" smooth={true}>
               {TextAndContent.homePage.buttonText}
@@ -49,14 +44,8 @@ export const Home = () => {
                 alt="github logo"
               />
             </StyledA>
-            {/* </StyledHomeDiv> */}
           </StyledBgStyling>
         </StyledHomeWrapper>
-        <StyledHome center transformIt hideIt />
-        <StyledHome centerDuo transformIt hideIt />
-        <StyledHome left bottom transformIt />
-        <StyledHome middle bottom transformIt />
-        <StyledHome right bottom />
       </StyledSection>
 
       <Projects />
