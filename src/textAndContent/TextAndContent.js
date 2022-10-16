@@ -1,4 +1,3 @@
-import marc from "../images/marc-mintel-1iYTusNPlSk-unsplash.jpg";
 import pxl from "../images/PXL_20220930_103519664_3.jpg";
 import invoice from "../images/Invoice-Screen.jpg";
 
@@ -12,7 +11,7 @@ export const TextAndContent = {
 
   homePage: {
     headline: "Michael",
-    text: "Dev & IT fellow",
+    text: "Dev & IT-kar",
     image: pxl,
     imageSource:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg",
