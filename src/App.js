@@ -1,14 +1,11 @@
 import { InitialStyle } from "./components/styles/InitialStyling";
 import MainPage from "./pages/MainPage";
-import MyErrorBoundary from "./ErrorBoundary";
 
 function App() {
   return (
     <>
-      <MyErrorBoundary>
-        <InitialStyle />
-        <MainPage />
-      </MyErrorBoundary>
+      <InitialStyle />
+      <MainPage />
     </>
   );
 }

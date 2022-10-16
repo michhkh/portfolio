@@ -4,7 +4,6 @@ import {
   StyledNavContainer,
   StyledNavLogo,
   StyledNavWrapper,
-  StyledRouteLink,
   StyledLink,
   StyledNav,
   StyledUl,
