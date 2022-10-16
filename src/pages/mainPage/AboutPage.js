@@ -16,7 +16,7 @@ export const About = () => {
       <StyledSection id="about">
         <StyledAboutWrapper>
           <StyledHeader>{TextAndContent.aboutPage.headline}</StyledHeader>
-          <StyledP>{TextAndContent.aboutPage.text}</StyledP>
+          <StyledP aboutP>{TextAndContent.aboutPage.text}</StyledP>
           <StyledBgStyling aboutStyling>
             <StyledDiv aboutTextDiv>
               <StyledP aboutText>{TextAndContent.aboutPage.listItem1}</StyledP>

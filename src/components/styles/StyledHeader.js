@@ -20,7 +20,7 @@ export const StyledNavLogo = styled.div`
 `;
 
 export const StyledNav = styled.nav`
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 768px) {
     position: relative;
     display: flex;
     align-items: center;
@@ -38,7 +38,7 @@ export const StyledMobileIcon = styled.div`
   cursor: pointer;
   color: #fff;
 
-  @media (min-width: 600px) {
+  @media (min-width: 768px) {
     display: none;
   }
 `;
@@ -55,7 +55,7 @@ export const StyledRouteLink = styled(LinkRouter)`
     text-decoration: underline;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 768px) {
     font-size: 2.8rem;
   }
 `;
@@ -76,7 +76,7 @@ export const StyledLink = styled(LinkScroll)`
     cursor: pointer;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 768px) {
     font-size: ${(props) => props.linkLogo && "2.8rem"};
   }
 `;
@@ -87,7 +87,7 @@ export const StyledUl = styled.ul`
   margin: 0;
   line-height: 1.6;
 
-  @media (min-width: 600px) {
+  @media (min-width: 768px) {
     display: ${(props) => props.showNavs && "flex"};
     align-items: center;
     font-size: 1.4rem;

@@ -14,50 +14,6 @@ export const StyledMainPageWrapper = styled.div`
   margin: 0;
 `;
 
-export const StyledHome = styled.div`
-  width: 15%;
-  max-width: 150px;
-  height: 8vh;
-  transform: ${(props) =>
-    props.transformIt ? "rotate(0.443turn)" : "rotate(0.015turn)"};
-
-  background: rgba(255, 255, 255, 0.29);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(1.2px);
-  -webkit-backdrop-filter: blur(1.2px);
-  border: 1px solid rgba(255, 255, 255, 0.26);
-  left: ${(props) =>
-    props.left
-      ? "10%"
-      : props.right
-      ? "76%"
-      : props.middle
-      ? "45%"
-      : props.center
-      ? "33%"
-      : props.centerDuo && "35%"};
-  top: ${(props) =>
-    props.top
-      ? "12%"
-      : props.bottom
-      ? "92%"
-      : props.center
-      ? "28em"
-      : props.centerDuo && "30em"};
-  position: absolute;
-  opacity: ${(props) => props.transformIt && "0.27"};
-  visibility: ${(props) => (props.hideIt ? "hidden" : "visible")};
-
-  @media screen and (min-width: 600px) {
-    height: 12vh;
-    left: ${(props) =>
-      props.left ? "10%" : props.right ? "80%" : props.middle && "45%"};
-    top: ${(props) => (props.top ? "6em" : props.bottom && "40em")};
-    visibility: ${(props) => (props.hideIt ? "visible" : "visible")};
-  }
-`;
-
 export const StyledSection = styled.section`
   width: 85%;
   padding: 1em 0 2em;
@@ -66,7 +22,7 @@ export const StyledSection = styled.section`
   margin: auto auto;
   height: 100vh;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 768px) {
     line-height: 1.6;
   }
 `;
@@ -82,7 +38,7 @@ export const StyledHomeContainer = styled.div`
   padding: 0;
   height: 60vh;
 
-  @media (min-width: 600px) {
+  @media (min-width: 768px) {
     width: 100%;
   }
 `;
@@ -90,13 +46,13 @@ export const StyledHomeContainer = styled.div`
 export const StyledHomeWrapper = styled.div`
   width: 100%;
   height: 62vh;
-  margin: 1em auto;
+  margin: 2em auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 768px) {
     width: 100%;
     height: auto;
     flex-direction: row;
@@ -122,7 +78,7 @@ export const StyledImage = styled.img`
   filter: ${(props) =>
     props.python && "drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.29))"};
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 768px) {
     max-width: ${(props) => (props.aboutImg ? "15%" : "25%")};
   }
 `;
@@ -130,9 +86,8 @@ export const StyledImage = styled.img`
 export const StyledHomeImage = styled.img`
   max-width: 40%;
   border-radius: 2em;
-  z-index: 10;
 
-  @media (min-width: 600px) {
+  @media (min-width: 768px) {
     max-width: 25%;
   }
 `;
@@ -187,14 +142,14 @@ export const StyledBgStyling = styled.div`
       : props.rightStyling
       ? "0 0 8em"
       : props.projectsStyling
-      ? "0 1em 2em"
+      ? "0 1em 4em"
       : props.aboutStyling
       ? "1em auto"
       : props.homeStyling && "1em 0 0 0"};
 
-  @media (min-width: 600px) {
+  @media (min-width: 768px) {
     padding: ${(props) =>
-      props.aboutStyling ? "1em" : props.homeStyling ? ".25em" : "4em 2em"};
+      props.aboutStyling ? "2em 1em" : props.homeStyling ? "4em" : "4em 2em"};
     width: ${(props) => props.homeStyling && "40%"};
   }
 `;
@@ -225,7 +180,7 @@ export const StyledDiv = styled.div`
     line-height: ${(props) => props.aboutTextDiv && "1.6"};
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 768px) {
     flex-direction: ${(props) => props.projectsDiv && "row"};
     width: ${(props) => props.aboutTextDiv && "58%"};
   }

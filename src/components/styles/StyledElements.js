@@ -19,9 +19,9 @@ export const StyledButton = styled(LinkScroll)`
     background: radial-gradient(#01497c 79%, #013a63 30%);
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 768px) {
     font-size: 1.2rem;
-    padding: 0.5em 2.5em;
+    padding: 0.75em 2.5em;
   }
 `;
 
@@ -29,10 +29,10 @@ export const StyledHeader = styled.h1`
   font-size: 2rem;
   font-weight: bold;
   margin-top: 0;
-  margin-bottom: ${(props) => (props.homeSection ? ".5em" : "0.5em")};
+  margin-bottom: ${(props) => (props.homeSection ? "1em" : "0.5em")};
   padding: 0.5em;
 
-  @media (min-width: 600px) {
+  @media (min-width: 768px) {
     font-size: 3rem;
   }
 `;
@@ -40,9 +40,8 @@ export const StyledHeader = styled.h1`
 export const StyledP = styled.p`
   font-size: ${(props) =>
     props.aboutText ? "1rem" : props.homeP ? "1rem" : "1.2rem"};
-  padding: ${(props) => props.aboutP && ".25em 1em"};
   margin-bottom: ${(props) =>
-    props.projectsP ? "1em" : props.homeP && ".5em"};
+    props.projectsP ? "3em" : props.aboutP ? "2em" : props.homeP && ".5em"};
   margin-top: ${(props) => props.aboutText && ".8em"};
 
   @media screen and (min-width: 300px) {
