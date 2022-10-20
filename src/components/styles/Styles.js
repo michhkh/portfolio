@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { TextAndContent } from "../../textAndContent/TextAndContent";
 
 export const StyledMainPageContainer = styled.div`
   margin: 0;
@@ -68,18 +69,31 @@ export const StyledA = styled.a`
   margin-top: ${(props) => (props.homeA ? "1.25em" : "0")};
   font-size: 1.2rem;
   color: ${(props) => props.projectsA && "#013A63"};
+  opacity: ${(props) => props.projectsA && "0"};
+  width: ${(props) => props.projectsA && "100%"};
+  padding: ${(props) => props.projectsA && "4em 2em "};
+
+  &:hover {
+    opacity: ${(props) => props.projectsA && "0.6"};
+    color: ${(props) => props.projectsA && "#fff"};
+    font-weight: ${(props) => props.projectsA && "bold"};
+    border: ${(props) => props.projectsA && "2px solid #fff"};
+    filter: ${(props) => props.projectsA && "drop-shadow(7px 1px 12px black)"};
+    background: ${(props) => props.projectsA && "#000"};
+  }
 `;
 
 export const StyledImage = styled.img`
   max-width: ${(props) =>
-    props.aboutImg ? "36%" : props.projectsImg ? "100%" : "75%"};
+    props.aboutImg ? "36%" : props.projectsImg ? "35%" : "75%"};
   margin-top: ${(props) => props.homeImg && "2em"};
   width: ${(props) => props.projectsImg && "100%"};
   filter: ${(props) =>
     props.python && "drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.29))"};
 
   @media screen and (min-width: 768px) {
-    max-width: ${(props) => (props.aboutImg ? "15%" : "25%")};
+    max-width: ${(props) =>
+      props.aboutImg ? "15%" : props.projectsImg ? "65%" : "25%"};
   }
 `;
 
@@ -98,7 +112,21 @@ export const StyledBgStyling = styled.div`
       ? "rgba(255, 255, 255, 0.29)"
       : props.homeStyling
       ? "rgba(255, 255, 255, 0.29)"
-      : "rgba(22, 224, 189, 0.54)"};
+      : props.firstProject
+      ? `url(${TextAndContent.projectsPage.projectImage1})`
+      : props.secondProject
+      ? `url(${TextAndContent.projectsPage.projectImage2})`
+      : props.thirdProject
+      ? `url(${TextAndContent.projectsPage.projectImage3})`
+      : props.fourthProject
+      ? `url(${TextAndContent.projectsPage.projectImage4})`
+      : props.fifthProject
+      ? `url(${TextAndContent.projectsPage.projectImage5})`
+      : props.sixthProject
+      ? `url(${TextAndContent.projectsPage.projectImage6})`
+      : `rgba(255, 255, 255, 0.29)`};
+  background-size: cover;
+  background-position: center 5%;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: ${(props) =>
@@ -106,12 +134,16 @@ export const StyledBgStyling = styled.div`
       ? "blur(1.2px)"
       : props.homeStyling
       ? "blur(1.2px)"
+      : props.projectsStyling
+      ? "null"
       : "blur(2.5px)"};
   -webkit-backdrop-filter: ${(props) =>
     props.aboutStyling
       ? "blur(1.2px)"
       : props.homeStyling
       ? "blur(1.2px)"
+      : props.projectsStyling
+      ? "null"
       : "blur(2.5px)"};
   border: ${(props) =>
     props.aboutStyling
@@ -126,6 +158,8 @@ export const StyledBgStyling = styled.div`
       ? ".25em 1em"
       : props.homeStyling
       ? "1em 2.5em"
+      : props.projectsStyling
+      ? "0"
       : "1em 1.25em"};
   width: ${(props) =>
     props.aboutStyling ? "90%" : props.homeStyling ? "40%" : "65%"};
@@ -149,13 +183,28 @@ export const StyledBgStyling = styled.div`
 
   @media (min-width: 768px) {
     padding: ${(props) =>
-      props.aboutStyling ? "2em 1em" : props.homeStyling ? "4em" : "4em 2em"};
+      props.aboutStyling
+        ? "2em 1em"
+        : props.homeStyling
+        ? "4em"
+        : props.projectsStyling
+        ? "0"
+        : "4em 2em"};
     width: ${(props) => props.homeStyling && "40%"};
+  }
+
+  &:hover {
+    opacity: ${(props) => props.projectsStyling && "0.7"};
+    transform: ${(props) => props.projectsStyling && "scale(1.1)"};
+    filter: ${(props) =>
+      props.projectsStyling && "drop-shadow(2px 2px 15px #fff)"};
   }
 `;
 
 export const StyledProjectsContainer = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const StyledDiv = styled.div`
@@ -173,7 +222,7 @@ export const StyledDiv = styled.div`
   align-items: ${(props) =>
     props.projectsDiv ? "center" : props.aboutDiv && "center"};
   justify-content: ${(props) =>
-    props.projectsDiv ? "center" : props.aboutDiv && "space-evenly"};
+    props.projectsDiv ? "space-between" : props.aboutDiv && "space-evenly"};
   line-height: ${(props) => props.aboutTextDiv && "1.4"};
 
   @media screen and (min-width: 400px) {
