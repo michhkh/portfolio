@@ -19,7 +19,7 @@ export const StyledButton = styled(LinkScroll)`
     background: radial-gradient(#01497c 79%, #013a63 30%);
   }
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 1.2rem;
     padding: 0.75em 2.5em;
   }
@@ -32,7 +32,7 @@ export const StyledHeader = styled.h1`
   margin-bottom: ${(props) => (props.homeSection ? "1em" : "0.5em")};
   padding: 0.5em;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 3rem;
   }
 `;
@@ -48,12 +48,12 @@ export const StyledP = styled.p`
     font-size: 1.2rem;
   }
 
-  @media (min-width: 800px) {
+  @media screen and (min-width: 800px) {
     font-size: ${(props) => (props.aboutText ? "1.4rem" : "1.6rem")};
   }
 `;
 
-export const StyledScrollButton = styled(LinkScroll)`
+export const StyledScrollButton = styled.div`
   padding: 1.25em 1.25em;
   background-color: rgba(255, 255, 255, 0.29);
   border: none;
@@ -71,7 +71,7 @@ export const StyledScrollButton = styled(LinkScroll)`
   justify-content: center;
   z-index: 10;
 
-  @media (min-width: 500px) {
+  @media screen and (min-width: 500px) {
     left: 93%;
   }
 `;

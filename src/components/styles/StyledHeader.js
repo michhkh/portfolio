@@ -38,7 +38,7 @@ export const StyledMobileIcon = styled.div`
   cursor: pointer;
   color: #fff;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     display: none;
   }
 `;
@@ -55,29 +55,28 @@ export const StyledRouteLink = styled(LinkRouter)`
     text-decoration: underline;
   }
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 2.8rem;
   }
 `;
 
 export const StyledLink = styled(LinkScroll)`
-  margin-left: ${(props) => props.linkItem && "1.5em"};
+  margin-left: ${(props) => props.item && "1.5em"};
   text-decoration: none;
   color: white;
-  font-size: ${(props) =>
-    props.linkItem ? "1.6rem" : props.linkLogo && "1.2rem"};
+  font-size: ${(props) => (props.item ? "1.6rem" : props.logo && "1.2rem")};
 
-  font-weight: ${(props) => props.linkLogo && "bold"};
-  letter-spacing: ${(props) => props.linkLogo && "0.25em"};
-  font-family: ${(props) => props.linkLogo && "Slackey, cursive"};
+  font-weight: ${(props) => props.logo && "bold"};
+  letter-spacing: ${(props) => props.logo && "0.25em"};
+  font-family: ${(props) => props.logo && "Slackey, cursive"};
 
   :hover {
     text-decoration: underline;
     cursor: pointer;
   }
 
-  @media (min-width: 768px) {
-    font-size: ${(props) => props.linkLogo && "2.8rem"};
+  @media screen and (min-width: 768px) {
+    font-size: ${(props) => props.logo && "2.8rem"};
   }
 `;
 
@@ -87,7 +86,7 @@ export const StyledUl = styled.ul`
   margin: 0;
   line-height: 1.6;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     display: ${(props) => props.showNavs && "flex"};
     align-items: center;
     font-size: 1.4rem;

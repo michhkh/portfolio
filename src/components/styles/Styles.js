@@ -39,7 +39,7 @@ export const StyledHomeContainer = styled.div`
   padding: 0;
   height: 60vh;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 100%;
   }
 `;
@@ -67,10 +67,10 @@ export const StyledHomeDiv = styled.div`
 
 export const StyledA = styled.a`
   margin-top: ${(props) => (props.homeA ? "1.25em" : "0")};
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   color: ${(props) => props.projectsA && "transparent"};
   width: ${(props) => props.projectsA && "100%"};
-  padding: ${(props) => props.projectsA && "2em 1.25em"};
+  padding: ${(props) => props.projectsA && "15%"};
 
   &:hover {
     opacity: ${(props) => props.projectsA && "0.85"};
@@ -82,7 +82,8 @@ export const StyledA = styled.a`
   }
 
   @media screen and (min-width: 768px) {
-    padding: ${(props) => props.projectsA && "4em 2em"};
+    font-size: 1.2rem;
+    padding: ${(props) => props.projectsA && "30% 20%"};
   }
 `;
 
@@ -104,7 +105,7 @@ export const StyledHomeImage = styled.img`
   max-width: 40%;
   border-radius: 2em;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     max-width: 25%;
   }
 `;
@@ -129,7 +130,7 @@ export const StyledBgStyling = styled.div`
       ? `url(${TextAndContent.projectsPage.projectImage6})`
       : `rgba(255, 255, 255, 0.29)`};
   background-size: cover;
-  background-position: center 5%;
+  background-position: 20% 5%;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: ${(props) =>
@@ -184,7 +185,7 @@ export const StyledBgStyling = styled.div`
       ? "1em auto"
       : props.homeStyling && "1em 0 0 0"};
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     padding: ${(props) =>
       props.aboutStyling
         ? "2em 1em"
