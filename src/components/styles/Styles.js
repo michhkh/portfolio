@@ -68,24 +68,27 @@ export const StyledHomeDiv = styled.div`
 export const StyledA = styled.a`
   margin-top: ${(props) => (props.homeA ? "1.25em" : "0")};
   font-size: 1.2rem;
-  color: ${(props) => props.projectsA && "#013A63"};
-  opacity: ${(props) => props.projectsA && "0"};
+  color: ${(props) => props.projectsA && "transparent"};
   width: ${(props) => props.projectsA && "100%"};
-  padding: ${(props) => props.projectsA && "4em 2em "};
+  padding: ${(props) => props.projectsA && "2em 1.25em"};
 
   &:hover {
-    opacity: ${(props) => props.projectsA && "0.6"};
+    opacity: ${(props) => props.projectsA && "0.85"};
     color: ${(props) => props.projectsA && "#fff"};
     font-weight: ${(props) => props.projectsA && "bold"};
     border: ${(props) => props.projectsA && "2px solid #fff"};
-    filter: ${(props) => props.projectsA && "drop-shadow(7px 1px 12px black)"};
-    background: ${(props) => props.projectsA && "#000"};
+    filter: ${(props) => props.projectsA && "drop-shadow(7px 1px 4px black)"};
+    background-color: ${(props) => props.projectsA && "#000"};
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: ${(props) => props.projectsA && "4em 2em"};
   }
 `;
 
 export const StyledImage = styled.img`
   max-width: ${(props) =>
-    props.aboutImg ? "36%" : props.projectsImg ? "35%" : "75%"};
+    props.aboutImg ? "22%" : props.projectsImg ? "5%" : "75%"};
   margin-top: ${(props) => props.homeImg && "2em"};
   width: ${(props) => props.projectsImg && "100%"};
   filter: ${(props) =>
@@ -131,20 +134,20 @@ export const StyledBgStyling = styled.div`
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: ${(props) =>
     props.aboutStyling
-      ? "blur(1.2px)"
+      ? "blur(0px)"
       : props.homeStyling
-      ? "blur(1.2px)"
+      ? "blur(0px)"
       : props.projectsStyling
-      ? "null"
-      : "blur(2.5px)"};
+      ? null
+      : "blur(0.5px)"};
   -webkit-backdrop-filter: ${(props) =>
     props.aboutStyling
-      ? "blur(1.2px)"
+      ? "blur(0px)"
       : props.homeStyling
-      ? "blur(1.2px)"
+      ? "blur(0px)"
       : props.projectsStyling
-      ? "null"
-      : "blur(2.5px)"};
+      ? null
+      : "blur(0.5px)"};
   border: ${(props) =>
     props.aboutStyling
       ? "1px solid rgba(255, 255, 255, 0.26)"
@@ -162,7 +165,7 @@ export const StyledBgStyling = styled.div`
       ? "0"
       : "1em 1.25em"};
   width: ${(props) =>
-    props.aboutStyling ? "90%" : props.homeStyling ? "40%" : "65%"};
+    props.aboutStyling ? "90%" : props.homeStyling ? "40%" : "52%"};
   display: flex;
   flex-direction: ${(props) =>
     props.aboutStyling ? "column" : props.homeStyling ? "column" : "row"};
@@ -190,27 +193,32 @@ export const StyledBgStyling = styled.div`
         : props.projectsStyling
         ? "0"
         : "4em 2em"};
-    width: ${(props) => props.homeStyling && "40%"};
+    width: ${(props) =>
+      props.homeStyling ? "40%" : props.projectsStyling && "65%"};
   }
 
   &:hover {
-    opacity: ${(props) => props.projectsStyling && "0.7"};
+    opacity: ${(props) => props.projectsStyling && "0.9"};
     transform: ${(props) => props.projectsStyling && "scale(1.1)"};
     filter: ${(props) =>
-      props.projectsStyling && "drop-shadow(2px 2px 15px #fff)"};
+      props.projectsStyling && "drop-shadow(2px 12px 22px #fff)"};
   }
 `;
 
 export const StyledProjectsContainer = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const StyledDiv = styled.div`
   width: ${(props) =>
     props.projectsDiv
-      ? "90%"
+      ? "50%"
       : props.aboutTextDiv
       ? "100%"
       : props.aboutDiv && "60%"};
@@ -231,7 +239,8 @@ export const StyledDiv = styled.div`
 
   @media screen and (min-width: 768px) {
     flex-direction: ${(props) => props.projectsDiv && "row"};
-    width: ${(props) => props.aboutTextDiv && "58%"};
+    width: ${(props) =>
+      props.aboutTextDiv ? "58%" : props.projectsDiv && "90%"};
   }
 `;
 
