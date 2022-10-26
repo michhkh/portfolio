@@ -13,10 +13,10 @@ import {
 
 export const Header = ({ toggle }) => {
   return (
-    <StyledNavContainer>
+    <StyledNavContainer id="/">
       <StyledNavWrapper>
         <StyledNavLogo>
-          <StyledLink linkLogo to="/">
+          <StyledLink to="/" logo="true">
             {TextAndContent.header.mainHome}
           </StyledLink>
         </StyledNavLogo>
@@ -24,19 +24,19 @@ export const Header = ({ toggle }) => {
         <StyledNav>
           <StyledUl showNavs>
             <StyledLi>
-              <StyledLink linkItem to="/">
+              <StyledLink to="/" item="true">
                 {TextAndContent.header.home}
               </StyledLink>
             </StyledLi>
 
             <StyledLi>
-              <StyledLink linkItem to="projects" smooth={true}>
+              <StyledLink to="projects" smooth={true} item="true">
                 {TextAndContent.header.projects}
               </StyledLink>
             </StyledLi>
 
             <StyledLi>
-              <StyledLink linkItem to="about" smooth={true}>
+              <StyledLink to="about" smooth={true} item="true">
                 {TextAndContent.header.about}
               </StyledLink>
             </StyledLi>
