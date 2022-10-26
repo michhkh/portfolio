@@ -7,7 +7,6 @@ import {
   StyledProjectsDiv,
   StyledProjectsContainer,
   StyledA,
-  StyledImage,
 } from "../../components/styles/Styles";
 import { StyledHeader } from "../../components/styles/StyledElements";
 import { TextAndContent } from "../../textAndContent/TextAndContent";
