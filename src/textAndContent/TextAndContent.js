@@ -1,5 +1,10 @@
 import pxl from "../images/PXL_20220930_103519664_3.jpg";
 import invoice from "../images/Invoice-Screen.jpg";
+import pazaak from "../images/Pazaak-dicegame-screen.jpg";
+import passwordGen from "../images/Password-gen-screen.jpg";
+import collatz from "../images/Collatz-screen.jpg";
+import reactApp from "../images/React-app-screen.jpg";
+import solsystem from "../images/Solsystem-project-screen.jpg";
 
 export const TextAndContent = {
   header: {
@@ -22,15 +27,24 @@ export const TextAndContent = {
   projectsPage: {
     headline: "Mine Prosjekter",
     text: "Sjekk ut hva jeg har laget",
-    image: invoice,
-    projectName1: "Invoice Creator",
-    projectName2: "Collatz",
-    projectName3: "Password Generator",
-    projectName4: "React App",
-    projectLink1: "https://michhkh.github.io/invoice-creator/",
-    projectLink2: "https://michhkh.github.io/collatz/",
-    projectLink3: "https://michhkh.github.io/password-generator/",
-    projectLink4: "https://michhkh.github.io/react-app/",
+    projectImage1: pazaak,
+    projectImage2: solsystem,
+    projectImage3: invoice,
+    projectImage4: collatz,
+    projectImage5: passwordGen,
+    projectImage6: reactApp,
+    projectName1: "Pazaak DiceGame",
+    projectName2: "Solsystemet",
+    projectName3: "Invoice Creator",
+    projectName4: "Collatz",
+    projectName5: "Password Generator",
+    projectName6: "React App",
+    projectLink1: "https://michhkh.github.io/pazaak-dicegame/",
+    projectLink2: "https://andreastak86.github.io/Solsytemet/",
+    projectLink3: "https://michhkh.github.io/invoice-creator/",
+    projectLink4: "https://michhkh.github.io/collatz/",
+    projectLink5: "https://michhkh.github.io/password-generator/",
+    projectLink6: "https://michhkh.github.io/react-app/",
   },
 
   aboutPage: {

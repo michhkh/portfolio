@@ -20,7 +20,7 @@ export const Projects = () => {
         <StyledProjectsContainer>
           <StyledDiv projectsDiv>
             <StyledProjectsDiv projectsDiv>
-              <StyledBgStyling projectsStyling>
+              <StyledBgStyling projectsStyling firstProject>
                 <StyledA
                   projectsA
                   href={TextAndContent.projectsPage.projectLink1}
@@ -32,7 +32,7 @@ export const Projects = () => {
             </StyledProjectsDiv>
 
             <StyledProjectsDiv projectsDiv>
-              <StyledBgStyling projectsStyling>
+              <StyledBgStyling projectsStyling secondProject>
                 <StyledA
                   projectsA
                   href={TextAndContent.projectsPage.projectLink2}
@@ -42,11 +42,9 @@ export const Projects = () => {
                 </StyledA>
               </StyledBgStyling>
             </StyledProjectsDiv>
-          </StyledDiv>
 
-          <StyledDiv projectsDiv>
             <StyledProjectsDiv projectsDiv>
-              <StyledBgStyling projectsStyling>
+              <StyledBgStyling projectsStyling thirdProject>
                 <StyledA
                   projectsA
                   href={TextAndContent.projectsPage.projectLink3}
@@ -56,15 +54,41 @@ export const Projects = () => {
                 </StyledA>
               </StyledBgStyling>
             </StyledProjectsDiv>
+          </StyledDiv>
 
+          <StyledDiv projectsDiv>
             <StyledProjectsDiv projectsDiv>
-              <StyledBgStyling projectsStyling>
+              <StyledBgStyling projectsStyling fourthProject>
                 <StyledA
                   projectsA
                   href={TextAndContent.projectsPage.projectLink4}
                   target="_blank"
                 >
                   {TextAndContent.projectsPage.projectName4}
+                </StyledA>
+              </StyledBgStyling>
+            </StyledProjectsDiv>
+
+            <StyledProjectsDiv projectsDiv>
+              <StyledBgStyling projectsStyling fifthProject>
+                <StyledA
+                  projectsA
+                  href={TextAndContent.projectsPage.projectLink5}
+                  target="_blank"
+                >
+                  {TextAndContent.projectsPage.projectName5}
+                </StyledA>
+              </StyledBgStyling>
+            </StyledProjectsDiv>
+
+            <StyledProjectsDiv projectsDiv>
+              <StyledBgStyling projectsStyling sixthProject>
+                <StyledA
+                  projectsA
+                  href={TextAndContent.projectsPage.projectLink6}
+                  target="_blank"
+                >
+                  {TextAndContent.projectsPage.projectName6}
                 </StyledA>
               </StyledBgStyling>
             </StyledProjectsDiv>
