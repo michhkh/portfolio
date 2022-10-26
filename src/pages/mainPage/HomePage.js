@@ -16,7 +16,7 @@ export const Home = () => {
   return (
     <>
       <ScrollToTop />
-      <StyledSection id="/">
+      <StyledSection>
         <StyledHeader homeSection>
           {TextAndContent.homePage.headline}
         </StyledHeader>
