@@ -39,8 +39,8 @@ export const Home = () => {
             >
               <img
                 src={TextAndContent.homePage.imageSource}
-                width="75"
-                height="75"
+                width="75px"
+                height="75px"
                 alt="github logo"
               />
             </StyledA>
