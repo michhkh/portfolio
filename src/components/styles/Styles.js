@@ -46,7 +46,7 @@ export const StyledHomeContainer = styled.div`
 
 export const StyledHomeWrapper = styled.div`
   width: 100%;
-  height: 62vh;
+  height: auto;
   margin: 2em auto;
   display: flex;
   flex-direction: column;
@@ -70,7 +70,7 @@ export const StyledA = styled.a`
   font-size: 0.8rem;
   color: ${(props) => props.projectsA && "transparent"};
   width: ${(props) => props.projectsA && "100%"};
-  padding: ${(props) => props.projectsA && "15%"};
+  padding: ${(props) => props.projectsA && "35% 20%"};
 
   &:hover {
     opacity: ${(props) => props.projectsA && "0.85"};
@@ -89,7 +89,7 @@ export const StyledA = styled.a`
 
 export const StyledImage = styled.img`
   max-width: ${(props) =>
-    props.aboutImg ? "22%" : props.projectsImg ? "5%" : "75%"};
+    props.aboutImg ? "20%" : props.projectsImg ? "5%" : "75%"};
   margin-top: ${(props) => props.homeImg && "2em"};
   width: ${(props) => props.projectsImg && "100%"};
   filter: ${(props) =>
@@ -97,16 +97,22 @@ export const StyledImage = styled.img`
 
   @media screen and (min-width: 768px) {
     max-width: ${(props) =>
-      props.aboutImg ? "15%" : props.projectsImg ? "65%" : "25%"};
+      props.aboutImg ? "19%" : props.projectsImg ? "65%" : "25%"};
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: ${(props) => props.aboutImg && "15%"};
   }
 `;
 
 export const StyledHomeImage = styled.img`
-  max-width: 40%;
+  min-width: 150px;
+  max-width: 250px;
+  width: 45%;
   border-radius: 2em;
 
   @media screen and (min-width: 768px) {
-    max-width: 25%;
+    max-width: 500px;
   }
 `;
 
@@ -130,7 +136,7 @@ export const StyledBgStyling = styled.div`
       ? `url(${TextAndContent.projectsPage.projectImage6})`
       : `rgba(255, 255, 255, 0.29)`};
   background-size: cover;
-  background-position: 20% 5%;
+  background-position: 5% 30%;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: ${(props) =>
@@ -161,12 +167,12 @@ export const StyledBgStyling = styled.div`
     props.aboutStyling
       ? ".25em 1em"
       : props.homeStyling
-      ? "1em 2.5em"
+      ? "3em 3.5em"
       : props.projectsStyling
       ? "0"
       : "1em 1.25em"};
   width: ${(props) =>
-    props.aboutStyling ? "90%" : props.homeStyling ? "40%" : "52%"};
+    props.aboutStyling ? "90%" : props.homeStyling ? "40%" : "100%"};
   display: flex;
   flex-direction: ${(props) =>
     props.aboutStyling ? "column" : props.homeStyling ? "column" : "row"};
@@ -183,7 +189,7 @@ export const StyledBgStyling = styled.div`
       ? "0 1em 4em"
       : props.aboutStyling
       ? "1em auto"
-      : props.homeStyling && "1em 0 0 0"};
+      : props.homeStyling && "4em 0 0"};
 
   @media screen and (min-width: 768px) {
     padding: ${(props) =>
@@ -196,6 +202,7 @@ export const StyledBgStyling = styled.div`
         : "4em 2em"};
     width: ${(props) =>
       props.homeStyling ? "40%" : props.projectsStyling && "65%"};
+    background-position: 20% 5%;
   }
 
   &:hover {
@@ -241,7 +248,11 @@ export const StyledDiv = styled.div`
   @media screen and (min-width: 768px) {
     flex-direction: ${(props) => props.projectsDiv && "row"};
     width: ${(props) =>
-      props.aboutTextDiv ? "58%" : props.projectsDiv && "90%"};
+      props.aboutTextDiv
+        ? "58%"
+        : props.projectsDiv
+        ? "90%"
+        : props.aboutDiv && "40%"};
   }
 `;
 
