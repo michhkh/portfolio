@@ -51,7 +51,7 @@ export const TextAndContent = {
     headline: "Om meg",
     text: "Hvem er jeg?",
     listItem1:
-      "Jeg har en passion for IT og programmering, DevOps, IT-drift og datanettverk.",
+      "Jeg har stor interesse for IT og programmering, DevOps, IT-drift og datanettverk.",
     listItem2:
       "Har kunnskap innenfor frontend og backend, samt IT-drift og sikkerhet.",
     listItem3:
