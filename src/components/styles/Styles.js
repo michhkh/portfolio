@@ -167,7 +167,7 @@ export const StyledBgStyling = styled.div`
     props.aboutStyling
       ? ".25em 1em"
       : props.homeStyling
-      ? "3em 3.5em"
+      ? "1em 3.5em"
       : props.projectsStyling
       ? "0"
       : "1em 1.25em"};
@@ -189,7 +189,7 @@ export const StyledBgStyling = styled.div`
       ? "0 1em 4em"
       : props.aboutStyling
       ? "1em auto"
-      : props.homeStyling && "4em 0 0"};
+      : props.homeStyling && "3em 0 0"};
 
   @media screen and (min-width: 768px) {
     padding: ${(props) =>
