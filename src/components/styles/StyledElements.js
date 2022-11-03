@@ -3,7 +3,7 @@ import { Link as LinkScroll } from "react-scroll";
 
 export const StyledButton = styled(LinkScroll)`
   display: inline-block;
-  padding: 0.5em 1em;
+  padding: 0.25em 1.25em;
   background: radial-gradient(#013a63 59%, #01497c 30%);
 
   color: #fff;
@@ -21,6 +21,10 @@ export const StyledButton = styled(LinkScroll)`
 
   @media screen and (min-width: 768px) {
     font-size: 1.2rem;
+    padding: 0.5em 2em;
+  }
+
+  @media screen and (min-width: 1200px) {
     padding: 0.75em 2.5em;
   }
 `;
@@ -44,12 +48,14 @@ export const StyledP = styled.p`
     props.projectsP ? "3em" : props.aboutP ? "2em" : props.homeP && ".5em"};
   margin-top: ${(props) => props.aboutText && ".8em"};
   filter: ${(props) => props.aboutText && "drop-shadow(1px 1px 1px black)"};
+  padding: ${(props) => props.homeP && "0.25em"};
 
   @media screen and (min-width: 300px) {
     font-size: 1.2rem;
   }
 
   @media screen and (min-width: 800px) {
+    padding: ${(props) => props.homeP && "0.25em 0.5em"};
     font-size: ${(props) => (props.aboutText ? "1.4rem" : "1.6rem")};
   }
 `;
