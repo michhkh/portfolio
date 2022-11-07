@@ -25,7 +25,7 @@ export const Home = () => {
           <StyledHomeImage
             img
             src={TextAndContent.homePage.image}
-            alt="image"
+            alt="a picture of myself"
           />
           <StyledBgStyling homeStyling>
             <StyledP homeP>{TextAndContent.homePage.text}</StyledP>
